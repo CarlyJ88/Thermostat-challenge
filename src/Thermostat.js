@@ -43,3 +43,7 @@ Thermostat.prototype.turnOnPSM = function () {
 Thermostat.prototype.resetTemperature = function () {
   this.temperature = 20;
 };
+
+Thermostat.prototype.currentEnergyUsage = function () {
+  return 'Low usage';
+};

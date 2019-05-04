@@ -35,13 +35,12 @@ describe("Thermostat", function () {
     it("shows power saving mode is off", function () {
       thermostat.turnOffPSM();
       expect(thermostat.powerSavingModeActive()).toBe(false);
-
     });
     it("turns power saving mode back on", function () {
       thermostat.turnOffPSM();
       thermostat.turnOnPSM();
       expect(thermostat.powerSavingModeActive()).toBe(true);
-    })
+    });
   });
 
   describe("up", function () {
@@ -67,6 +66,13 @@ describe("Thermostat", function () {
       thermostat.up();
       thermostat.resetTemperature();
       expect(thermostat.temperature).toEqual(20);
+    });
+  });
+
+  describe("current energy use", function () {
+    it("shows low energy usage", function () {
+      thermostat.temperature = 17;
+      expect(thermostat.currentEnergyUsage()).toEqual('Low usage');
     });
   });
 });
