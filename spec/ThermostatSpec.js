@@ -74,5 +74,9 @@ describe("Thermostat", function () {
       thermostat.temperature = 17;
       expect(thermostat.currentEnergyUsage()).toEqual('Low usage');
     });
+    it("shows medium energy usage", function () {
+      thermostat.temperature = 24;
+      expect(thermostat.currentEnergyUsage()).toEqual('Medium usage');
+    });
   });
 });
