@@ -39,3 +39,7 @@ Thermostat.prototype.turnOffPSM = function () {
 Thermostat.prototype.turnOnPSM = function () {
   this.powerSavingMode = true;
 };
+
+Thermostat.prototype.resetTemperature = function () {
+  this.temperature = 20;
+};

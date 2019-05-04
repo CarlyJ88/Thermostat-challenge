@@ -61,4 +61,12 @@ describe("Thermostat", function () {
       expect(thermostat.down()).toEqual("Temperature too low");
     });
   });
+
+  describe("reset the temperature", function () {
+    it("resets the temperature to 20 degrees", function () {
+      thermostat.up();
+      thermostat.resetTemperature();
+      expect(thermostat.temperature).toEqual(20);
+    });
+  });
 });
