@@ -48,7 +48,10 @@ Thermostat.prototype.currentEnergyUsage = function () {
   if (this.temperature <= 17) {
   return 'Low usage';
   }
-  else {
+  else if (this.temperature <= 24) {
     return 'Medium usage';
+  }
+  else {
+    return 'High usage'
   };
 };
