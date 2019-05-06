@@ -3,7 +3,10 @@ $(document).ready(function () {
 
   function updateTemperature() {
     $('#temperature').text(thermostat.temperature);
+    $('#temperature').attr('class', thermostat.currentEnergyUsage());
   }
+
+  updateTemperature()
 
   $('#up').on('click', function () {
     thermostat.up();
