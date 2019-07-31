@@ -4,28 +4,27 @@
 <head>
   <meta charset="utf-8">
   <title>Thermostat</title>
-  <link rel="stylesheet" type="text/css" href="energy-usage.css" />
+  <link rel="stylesheet" type="text/css" href="thermostat.css" />
 </head>
 
 <body>
   <section>
-    <h1 id="temperature"></h1>
     <p>
-      <button id="up">+</button>
+        <select id="current-city">
+            <option value="london">London</option>
+            <option value="new york">New York</option>
+            <option value="paris">Paris</option>
+            <option value="tokyo">Tokyo</option>
+            <option value="budapest"></option>
+          </select>
+      <h1>Current temperature: <span id="current-temperature"></span></h1>
       <button id="down">-</button>
+      <button id="up">+</button>
       <button id="resetTemperature">reset</button>
       Power saving mode is <span id="powerSavingModeActive">On</span>
       <button id="turnOnPSM">PSM on</button>
       <button id="turnOffPSM">PSM off</button>
-
-      <h1>Current temperature: <span id="current-temperature"></span></h1>
-      <select id="current-city">
-        <option value="london">London</option>
-        <option value="new york">New York</option>
-        <option value="paris">Paris</option>
-        <option value="tokyo">Tokyo</option>
-        <option value="budapest">Budapest</option>
-      </select>
+      <h1 id="temperature"></h1>
     </p>
   </section>
   <script src="src/Thermostat.js"></script>
